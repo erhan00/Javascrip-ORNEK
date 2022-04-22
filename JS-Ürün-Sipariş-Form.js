@@ -97,6 +97,6 @@ function btnhesap()
     {
         maxtutar = maxtutar * 1.8;
     }
- document.getElementById("SNC00").innerHTML = "Ödemeniz Gereken Toplam Tutar :" + maxtutar;
 
+    document.getElementById("SNC00").innerHTML = "Ödemeniz Gereken Toplam Tutar :" + maxtutar;
 }

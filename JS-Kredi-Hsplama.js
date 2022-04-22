@@ -26,7 +26,7 @@ function hesapla() {
 
   aylıktaksit = ödenecektutar / VADE;
 
-  document.getElementById("sonuc").innerHTML = "Geri ödenecek Tutar : " + ödenecektutar + "<br>"
+  document.getElementById("sonuc").innerHTML = "Geri ödenecek Tutar : " + ödenecektutar.toFixed(2) + "<br>"
     + "Aylık Taksit :" + aylıktaksit.toFixed(2);
 
 }
