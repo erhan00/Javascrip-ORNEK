@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap.css">
+        <script src="JS-Kredi-Hsplama.js"></script>
+        <script src="JS-Ürün-Sipariş-Form.js"></script>
+      
+    </head>
+
+<body onload="urunadeti();uruntaksiti();">
+  <!--CARD ICERISINDE UYGULADIK, Sonuç Yazıldığında Sayfa Yüksekliği Değişmesin-->
+ <div class="card container mt-4" style="height: 240px;">
+    <div class="card-header">
+    <h4 class="text-danger">KREDİ HESAPLAMA FORMU :</h4>
+    </div>
+    
+    <div class="card-body">
+    <form action="#" id="form" class="mt-5">
+    <label for="kredıtutar"><h5 class="text-success">Çekileceek Kredi Tutarı :</h5></label>
+    <input type="text" id="kredıtutar" class="mx-3">
+     
+    <label for="vade"><h5 class="text-success">Vade Sayısı :</h5></label>
+    <select id="vade" class="text-danger mx-3">
+        <option value="8">8-ay</option>
+        <option value="12">12-ay</option>
+        <option value="18">18-ay</option>
+    </select>
+    
+    <input type="button" value="*-*-*- Geri Ödeme Hesapla" class="text-primary" onclick="hesapla();">
+  </form>
+ </div>
+
+ <h5 id="sonuc"></h5>
+
+ </div>
+
+<!--UYGULAMA İKİ-->
+<div class="mt-5 container bg-info text-dark" style="height:40px;"><h6>* * * * ÖRNEK UYGULAMA İKİ : * * * *</h6></div>
+
+
+<div class="card container mt-5" style="height: 350px;">
+  <div class="card-header">
+  <h4 class="text-danger">ERKEK-BAYAN ÜRÜN SİPARİŞ FORMU :</h4>
+  </div>
+
+  <div class="card-body">
+  <form action="#" id="form2">
+  <label for="cınsıyet" class="text-success mt-4"> <h5>Cinsiyet Seçimi Yapınız :</h5></label>
+
+  <label for="cins">
+    <input type="radio" name="cins" id="erkek" value="00erkek" class="mx-3" onclick="urungetir()">
+   <label> <h6 class="text-primary"> * * Erkek Ürünleri</h6> </label>
+  </label>
+
+  <label for="cins">
+    <input type="radio" name="cins" id="bayan" value="00bayan" class="mx-3" onclick="urungetir()">
+    <label><h6 class="text-primary"> * * Bayan Ürünleri</h6></label>
+  </label>
+  <div></div>
+  <label for="urunliste" class="text-success mt-4 mx-3"><h5>Ürün Seçimi Yapın : </h5></label>
+
+      <select id="urunliste">
+      
+      </select>
+  
+  <label for="adetseç" class="text-success mt-4 mx-3"><h5>Adet Seçiniz :</h5></label>
+      
+      <select id="urunadeti">
+
+      </select>
+
+  <label for="Taksitseç" class="text-success mt-4 mx-3"><h5>Taksit Seçenekleri :</h5></label>
+      <select id="uruntaksiti">
+
+      </select>    
+
+  <input type="button" value="*-*-*- HESAPLA" id="HSP" class="text-primary mx-5" onclick="btnhesap();">
+  </form>
+</div>
+
+  <h5 id="SNC00"></h5>
+</div>
+ </body>
+</html>
